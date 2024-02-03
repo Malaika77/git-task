@@ -50,30 +50,29 @@ html {
   width: 40px;
   height: 40px;
   border: none;
-
-  /*border: none;
-  background: none;
-  padding: 0;*/
+  background-color: rgba(255, 255, 255, 0);
 }
 .header-call {
   background-image: url(../img/svg/call.svg);
   width: 40px;
   height: 40px;
   border: none;
+  background-color: rgba(255, 255, 255, 0);
 }
 .header-chat {
   background-image: url(../img/svg/chat.svg);
   width: 40px;
   height: 40px;
   border: none;
+  background-color: rgba(255, 255, 255, 0);
 }
 .header-profile {
   background-image: url(../img/svg/profile.svg);
   width: 40px;
   height: 40px;
   border: none;
+  background-color: rgba(255, 255, 255, 0);
 }
-
 .header__left {
   display: flex;
   flex-wrap: nowrap;
@@ -95,12 +94,14 @@ html {
   width: 40px;
   height: 40px;
   border: none;
+  background-color: rgba(255, 255, 255, 0);
 }
 .header-checkstatus {
   background-image: url(../img/svg/checkstatus.svg);
   width: 40px;
   height: 40px;
   border: none;
+  background-color: rgba(255, 255, 255, 0);
 }
 .header__left::after {
   content: "";
@@ -252,12 +253,14 @@ html {
   width: 40px;
   height: 40px;
   border: none;
+  background-color: rgba(255, 255, 255, 0);
 }
 .main__title-btn-two {
   background-image: url(../img/svg/checkstatus.svg);
   width: 40px;
   height: 40px;
   border: none;
+  background-color: rgba(255, 255, 255, 0);
 }
 body {
   max-width: 1120px;

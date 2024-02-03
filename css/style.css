@@ -45,19 +45,42 @@ html {
   max-height: 88px;
   border-bottom: 1px #d9fff5 solid;
 }
-.header-menu__btn {
+.header__menu {
+  background-image: url(../img/svg/menu.svg);
+  width: 40px;
+  height: 40px;
   border: none;
+
+  /*border: none;
   background: none;
-  padding: 0;
+  padding: 0;*/
+}
+.header-call {
+  background-image: url(../img/svg/call.svg);
+  width: 40px;
+  height: 40px;
+  border: none;
+}
+.header-chat {
+  background-image: url(../img/svg/chat.svg);
+  width: 40px;
+  height: 40px;
+  border: none;
+}
+.header-profile {
+  background-image: url(../img/svg/profile.svg);
+  width: 40px;
+  height: 40px;
+  border: none;
 }
 
-.header-left {
+.header__left {
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
   gap: 16.73px;
 }
-.header-logo__img {
+.header__logo-img {
   width: 96.548px;
   height: 50.815px;
 }
@@ -68,14 +91,29 @@ html {
   gap: 16px;
 }
 .header-repair {
+  background-image: url(../img/svg/repair.svg);
+  width: 40px;
+  height: 40px;
   border: none;
-  background: none;
-  padding: 0;
 }
 .header-checkstatus {
+  background-image: url(../img/svg/checkstatus.svg);
+  width: 40px;
+  height: 40px;
   border: none;
-  background: none;
-  padding: 0;
+}
+.header__left::after {
+  content: "";
+  height: 32px;
+  border: 2px #eaeaea solid;
+}
+.header-call,
+.header-chat,
+.header-profile {
+  display: none;
+}
+.header-divider {
+  display: none;
 }
 
 /* Main */
@@ -107,6 +145,9 @@ html {
   gap: 16px;
   overflow-x: scroll;
 }
+.main__list::-webkit-scrollbar {
+  width: 0;
+}
 .main__item {
   font-family: "TT Lakes Medium";
   font-size: 16px;
@@ -128,24 +169,24 @@ html {
   line-height: 18px;
   color: #1b1c21;
   letter-spacing: 0.2px;
-  max-width: 288px;
+  width: 100%;
 }
-.main__description-text1 {
+.main__description-text-one {
   font-family: "TTLakes-Regular";
   font-size: 14px;
   line-height: 20px;
   color: #1b1c21;
   letter-spacing: 0.2px;
-  max-width: 312px;
+  width: 100%;
   display: none;
 }
-.main__description-text2 {
+.main__description-text-two {
   font-family: "TTLakes-Regular";
   font-size: 14px;
   line-height: 20px;
   color: #1b1c21;
   letter-spacing: 0.2px;
-  max-width: 490px;
+  width: 100%;
   display: none;
 }
 
@@ -165,21 +206,19 @@ html {
   background: none;
   text-align: left;
 }
+.main__btn::before {
+  content: "";
+  position: static;
+  background-image: url(../img/svg/expand.svg);
+  width: 24px;
+  height: 24px;
+  border: none;
+}
 .main__description {
   display: flex;
   flex-direction: column;
   margin: 24px 16px 16px;
   gap: 16px;
-}
-
-.header-call,
-.header-chat,
-.header-profile,
-.header-divider1 {
-  border: none;
-  background: none;
-  padding: 0;
-  display: none;
 }
 
 .main__title-list {
@@ -206,47 +245,57 @@ html {
   gap: 450px;
 }
 .main__content-img {
-  max-width: 320px;
-  height: 230px;
+  width: 100%;
 }
-.main__title-btn,
-.main__title-btn1 {
+.main__title-btn {
+  background-image: url(../img/svg/repair.svg);
+  width: 40px;
+  height: 40px;
   border: none;
-  background: none;
-  padding: 0;
 }
+.main__title-btn-two {
+  background-image: url(../img/svg/checkstatus.svg);
+  width: 40px;
+  height: 40px;
+  border: none;
+}
+body {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
 /* Media*/
 @media (min-width: 768px) {
   .header__wrapper {
     gap: 250px;
   }
-  .header-logo {
+  .header__logo {
     order: 1;
   }
-  .header-left {
+  .header__left {
     gap: 20px;
   }
   .header-call,
   .header-chat,
-  .header-profile,
-  .header-divider1 {
-    display: flex;
-  }
-  .main__description-text {
-    max-width: 312px;
-  }
-  .main__description-text1 {
+  .header-profile {
     display: block;
   }
+  .header-divider {
+    content: "";
+    height: 32px;
+    border: 2px #eaeaea solid;
+    display: block;
+  }
+
+  .main__description-text-one {
+    display: block;
+  }
+
   .main__content {
     display: flex;
     flex-direction: row;
     margin-top: 32px;
     gap: 48px;
-  }
-  .main__content-img {
-    max-width: 360px;
-    height: 260px;
   }
 }
 
@@ -262,17 +311,10 @@ html {
   .main__list {
     flex-wrap: wrap;
   }
-  .main__description-text1 {
+  .main__description-text-one {
     display: none;
   }
-  .main__description-text2 {
+  .main__description-text-two {
     display: block;
-  }
-  .main__description-text {
-    max-width: 490px;
-  }
-  .main__content-img {
-    max-width: 531px;
-    height: 383px;
   }
 }
